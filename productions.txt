@@ -1,0 +1,85 @@
+<s> -> ['<translation_unit>'] Select: {'double', '#', 'null', 'short', 'float', 'long', 'int'}
+<translation_unit> -> ['<external_declaration>', '<translation_unit>'] Select: {'double', 'short', 'float', 'long', 'int'}
+<external_declaration> -> ['<func_declaration>'] Select: {'double', 'short', 'float', 'long', 'int'}
+<func_declaration> -> ['<declaration_specifiers>', '<declarator>', '<declaration_list>', '<compound_stmt>'] Select: {'double', 'short', 'float', 'long', 'int'}
+<declaration_specifiers> -> ['<type_specifier>', 'ID', 'P31'] Select: {'double', 'short', 'float', 'long', 'int'}
+<type_specifier> -> ['int', 'P11'] Select: {'int'}
+<declarator> -> ['(', '<parameter_type_list>', ')'] Select: {'('}
+<parameter_type_list> -> ['null'] Select: {')'}
+<declaration_list> -> ['null'] Select: {'null', 'while', ';', '}', 'if', '{', 'ID'}
+<compound_stmt> -> ['{', '<declaration_list>', '<stmt_list>', '}'] Select: {'{'}
+<declaration_list> -> ['<declaration>', 'P22', '<declaration_list>'] Select: {'double', 'short', 'float', 'long', 'int'}
+<declaration> -> ['<declaration_specifiers>', 'P21', ';'] Select: {'double', 'short', 'float', 'long', 'int'}
+<declaration_specifiers> -> ['<type_specifier>', 'ID', 'P31'] Select: {'double', 'short', 'float', 'long', 'int'}
+<type_specifier> -> ['int', 'P11'] Select: {'int'}
+<declaration_list> -> ['<declaration>', 'P22', '<declaration_list>'] Select: {'double', 'short', 'float', 'long', 'int'}
+<declaration> -> ['<declaration_specifiers>', 'P21', ';'] Select: {'double', 'short', 'float', 'long', 'int'}
+<declaration_specifiers> -> ['<type_specifier>', 'ID', 'P31'] Select: {'double', 'short', 'float', 'long', 'int'}
+<type_specifier> -> ['float', 'P12'] Select: {'float'}
+<declaration_list> -> ['<declaration>', 'P22', '<declaration_list>'] Select: {'double', 'short', 'float', 'long', 'int'}
+<declaration> -> ['<declaration_specifiers>', 'P21', ';'] Select: {'double', 'short', 'float', 'long', 'int'}
+<declaration_specifiers> -> ['<type_specifier>', 'ID', 'P31'] Select: {'double', 'short', 'float', 'long', 'int'}
+<type_specifier> -> ['int', 'P11'] Select: {'int'}
+<declaration_list> -> ['<declaration>', 'P22', '<declaration_list>'] Select: {'double', 'short', 'float', 'long', 'int'}
+<declaration> -> ['<declaration_specifiers>', 'P21', ';'] Select: {'double', 'short', 'float', 'long', 'int'}
+<declaration_specifiers> -> ['<type_specifier>', 'ID', 'P31'] Select: {'double', 'short', 'float', 'long', 'int'}
+<type_specifier> -> ['float', 'P12'] Select: {'float'}
+<declaration_list> -> ['null'] Select: {'null', 'while', ';', '}', 'if', '{', 'ID'}
+<stmt_list> -> ['<stmt>', '<stmt_list>'] Select: {'ID', 'while', ';', 'if', '{'}
+<stmt> -> ['<expression_stmt>'] Select: {'ID', ';'}
+<expression_stmt> -> ['<expression>', ';'] Select: {'ID'}
+<expression> -> ['ID', '=', '<unary_expression>', 'P62', '<factor_expression>', 'P61'] Select: {'ID'}
+<unary_expression> -> ['<primary_expression>', 'P71'] Select: {'ID', 'STRING_LITERAL', 'INT', 'FLOAT', 'SHORT', '(', 'LONG'}
+<primary_expression> -> ['<constant>', 'P52'] Select: {'INT', 'FLOAT', 'SHORT', 'LONG'}
+<constant> -> ['INT', 'P41'] Select: {'INT'}
+<factor_expression> -> ['null'] Select: {')', ';'}
+<stmt_list> -> ['<stmt>', '<stmt_list>'] Select: {'ID', 'while', ';', 'if', '{'}
+<stmt> -> ['<selection_stmt>'] Select: {'if'}
+<selection_stmt> -> ['if', '(', '<primary_expression>', ')', 'P81', '<stmt>', 'P82'] Select: {'if'}
+<primary_expression> -> ['<constant>', 'P52'] Select: {'INT', 'FLOAT', 'SHORT', 'LONG'}
+<constant> -> ['INT', 'P41'] Select: {'INT'}
+<stmt> -> ['<compound_stmt>'] Select: {'{'}
+<compound_stmt> -> ['{', '<declaration_list>', '<stmt_list>', '}'] Select: {'{'}
+<declaration_list> -> ['null'] Select: {'null', 'while', ';', '}', 'if', '{', 'ID'}
+<stmt_list> -> ['<stmt>', '<stmt_list>'] Select: {'ID', 'while', ';', 'if', '{'}
+<stmt> -> ['<expression_stmt>'] Select: {'ID', ';'}
+<expression_stmt> -> ['<expression>', ';'] Select: {'ID'}
+<expression> -> ['ID', '=', '<unary_expression>', 'P62', '<factor_expression>', 'P61'] Select: {'ID'}
+<unary_expression> -> ['<primary_expression>', 'P71'] Select: {'ID', 'STRING_LITERAL', 'INT', 'FLOAT', 'SHORT', '(', 'LONG'}
+<primary_expression> -> ['<constant>', 'P52'] Select: {'INT', 'FLOAT', 'SHORT', 'LONG'}
+<constant> -> ['FLOAT', 'P42'] Select: {'FLOAT'}
+<factor_expression> -> ['/', '<unary_expression>', 'P103'] Select: {'/'}
+<unary_expression> -> ['<primary_expression>', 'P71'] Select: {'ID', 'STRING_LITERAL', 'INT', 'FLOAT', 'SHORT', '(', 'LONG'}
+<primary_expression> -> ['<constant>', 'P52'] Select: {'INT', 'FLOAT', 'SHORT', 'LONG'}
+<constant> -> ['FLOAT', 'P42'] Select: {'FLOAT'}
+<stmt_list> -> ['null'] Select: {'}'}
+<stmt_list> -> ['<stmt>', '<stmt_list>'] Select: {'ID', 'while', ';', 'if', '{'}
+<stmt> -> ['<expression_stmt>'] Select: {'ID', ';'}
+<expression_stmt> -> ['<expression>', ';'] Select: {'ID'}
+<expression> -> ['ID', '=', '<unary_expression>', 'P62', '<factor_expression>', 'P61'] Select: {'ID'}
+<unary_expression> -> ['<primary_expression>', 'P71'] Select: {'ID', 'STRING_LITERAL', 'INT', 'FLOAT', 'SHORT', '(', 'LONG'}
+<primary_expression> -> ['<constant>', 'P52'] Select: {'INT', 'FLOAT', 'SHORT', 'LONG'}
+<constant> -> ['INT', 'P41'] Select: {'INT'}
+<factor_expression> -> ['&', '<unary_expression>', 'P112'] Select: {'&'}
+<unary_expression> -> ['<primary_expression>', 'P71'] Select: {'ID', 'STRING_LITERAL', 'INT', 'FLOAT', 'SHORT', '(', 'LONG'}
+<primary_expression> -> ['<constant>', 'P52'] Select: {'INT', 'FLOAT', 'SHORT', 'LONG'}
+<constant> -> ['INT', 'P41'] Select: {'INT'}
+<stmt_list> -> ['<stmt>', '<stmt_list>'] Select: {'ID', 'while', ';', 'if', '{'}
+<stmt> -> ['<iter_stmt>'] Select: {'while'}
+<iter_stmt> -> ['while', '(', '<primary_expression>', ')', 'P91', '<stmt>', 'P92'] Select: {'while'}
+<primary_expression> -> ['<constant>', 'P52'] Select: {'INT', 'FLOAT', 'SHORT', 'LONG'}
+<constant> -> ['INT', 'P41'] Select: {'INT'}
+<stmt> -> ['<compound_stmt>'] Select: {'{'}
+<compound_stmt> -> ['{', '<declaration_list>', '<stmt_list>', '}'] Select: {'{'}
+<declaration_list> -> ['null'] Select: {'null', 'while', ';', '}', 'if', '{', 'ID'}
+<stmt_list> -> ['<stmt>', '<stmt_list>'] Select: {'ID', 'while', ';', 'if', '{'}
+<stmt> -> ['<expression_stmt>'] Select: {'ID', ';'}
+<expression_stmt> -> ['<expression>', ';'] Select: {'ID'}
+<expression> -> ['ID', '=', '<unary_expression>', 'P62', '<factor_expression>', 'P61'] Select: {'ID'}
+<unary_expression> -> ['<primary_expression>', 'P71'] Select: {'ID', 'STRING_LITERAL', 'INT', 'FLOAT', 'SHORT', '(', 'LONG'}
+<primary_expression> -> ['<constant>', 'P52'] Select: {'INT', 'FLOAT', 'SHORT', 'LONG'}
+<constant> -> ['FLOAT', 'P42'] Select: {'FLOAT'}
+<factor_expression> -> ['null'] Select: {')', ';'}
+<stmt_list> -> ['null'] Select: {'}'}
+<stmt_list> -> ['null'] Select: {'}'}
+<translation_unit> -> ['null'] Select: {'#'}
